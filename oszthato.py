@@ -8,9 +8,18 @@ Hívja meg a programban a megírt függvényt és írja ki, hogy hány darab hé
 """
 import random
 
-def hettelOszthato(szamok):
-
+def szamok_lista():
+    szamok=[]
     for i in range(0,50,1):
         szam = random.randint(1,100)
         szamok.append(szam)
-    print(szamok)
+    return szamok
+
+def hettelOszthato(szamok):
+    szamlalo: int= 0
+    for i in range(0,len(szamok),1):
+        if szamok[i] % 7 == 0:
+            szamlalo+=1
+    return szamlalo
+
+
